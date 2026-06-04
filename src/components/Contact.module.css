@@ -1,0 +1,35 @@
+.contact {
+  padding: 0.9rem 2.5rem;
+  background: var(--navy);
+}
+.grid {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+}
+.val {
+  font-size: 0.88rem;
+  color: var(--white);
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+  display: inline-block;
+}
+a.val:hover { border-bottom-color: rgba(255,255,255,0.4); }
+@media (max-width: 768px) {
+  .contact { padding: 0.9rem 1.25rem; }
+  .grid { gap: 1.5rem; }
+}

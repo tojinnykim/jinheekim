@@ -1,0 +1,80 @@
+.about {
+  padding: 4rem 2.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--gray1);
+}
+.sectionLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray3);
+  margin-bottom: 1.25rem;
+}
+.expGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--gray1);
+  border: 1px solid var(--gray1);
+  margin-bottom: 2rem;
+}
+.expBlock {
+  background: var(--white);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.expNum { font-size: 0.7rem; color: var(--navy); opacity: 0.3; font-weight: 500; }
+.expTitle { font-size: 0.88rem; font-weight: 500; color: var(--navy); line-height: 1.4; }
+.expDesc { font-size: 0.8rem; color: var(--gray4); line-height: 1.55; font-weight: 300; }
+
+/* 테이블형 경력/학력 */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.colTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gray1);
+}
+.list { list-style: none; }
+.row {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray1);
+  align-items: baseline;
+}
+.row:last-child { border-bottom: none; }
+.period {
+  font-size: 0.75rem;
+  color: var(--gray3);
+  font-weight: 300;
+  white-space: nowrap;
+}
+.company {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+.role {
+  font-size: 0.82rem;
+  color: var(--gray4);
+  font-weight: 300;
+}
+@media (max-width: 900px) {
+  .twoCol { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 768px) {
+  .about { padding: 3rem 1.25rem; }
+  .expGrid { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; gap: 0.2rem; }
+  .period { font-size: 0.7rem; }
+}

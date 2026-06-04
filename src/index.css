@@ -1,0 +1,21 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #F2F2F0;
+  --white: #FFFFFF;
+  --navy: #001F3F;
+  --navy2: #002a52;
+  --gray1: #E8E8E5;
+  --gray2: #C8C8C4;
+  --gray3: #8A8A85;
+  --gray4: #5A5A55;
+  --font: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
