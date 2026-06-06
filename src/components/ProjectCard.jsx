@@ -1,5 +1,7 @@
 import styles from './ProjectCard.module.css'
 
+const base = import.meta.env.BASE_URL
+
 export default function ProjectCard({ project, isSelected, onSelect }) {
   return (
     <div
@@ -7,7 +9,7 @@ export default function ProjectCard({ project, isSelected, onSelect }) {
       onClick={onSelect}
     >
       <div className={styles.thumb}>
-        <img src={project.thumbnail} alt={project.title} />
+        <img src={base + project.thumbnail.replace(/^\//, '')} alt={project.title} />
       </div>
       <div className={styles.body}>
         <div className={styles.client}>{project.client}</div>
