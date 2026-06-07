@@ -42,7 +42,13 @@ export default function ProjectModal({ project, onClose }) {
             <div className={styles.section}>
               <div className={styles.sectionLabel}>해결 전략</div>
               <ul className={styles.list}>
-                {project.strategy.map((s, i) => <li key={i}>{s}</li>)}
+                {project.strategy.map((s, i) => (
+                  <li key={i}>
+                    {typeof s === 'object' && s.url ? (
+                      <a href={s.url} target="_blank" rel="noreferrer" className={styles.inlineLink}>{s.text} →</a>
+                    ) : s}
+                  </li>
+                ))}
               </ul>
             </div>
             <div className={styles.section}>
