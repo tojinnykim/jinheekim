@@ -45,7 +45,11 @@ export default function ProjectModal({ project, onClose }) {
                 {project.strategy.map((s, i) => (
                   <li key={i}>
                     {typeof s === 'object' && s.url ? (
-                      <a href={s.url} target="_blank" rel="noreferrer" className={styles.inlineLink}>{s.text} →</a>
+                      s.linkOnly ? (
+                        <>{s.text} <a href={s.url} target="_blank" rel="noreferrer" className={styles.inlineLink}>링크 →</a></>
+                      ) : (
+                        <a href={s.url} target="_blank" rel="noreferrer" className={styles.inlineLink}>{s.text} →</a>
+                      )
                     ) : s}
                   </li>
                 ))}

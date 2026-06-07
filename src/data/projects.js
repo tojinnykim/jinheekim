@@ -18,6 +18,7 @@ export const projects = [
       '/images/project_imgs_0000s_0024_obihiro2.jpg',
     ],
     links: [
+      { label: '캠페인 페이지', url: 'https://www.aerok.com/ko-KR/event-benefit/event/238' },
       { label: '캠페인 티징 영상', url: 'https://www.instagram.com/reel/DLn_ATSvnyM/' },
       { label: '캠페인 본편 영상', url: 'https://www.instagram.com/reel/DL1Li1tPObU/' },
     ],
@@ -121,7 +122,7 @@ export const projects = [
       '현직 객실 승무원 경험 기반 어린이 항공 안전 도서 기획·제작',
       '전국 온·오프라인 서점 출시 및 전 노선 기내 전 좌석 탑재',
       '캠페인 영상 총 4건 제작',
-      { text: '더현대 및 오프라인 서점에서 어린이 대상 강연 프로그램 진행', url: 'https://www.instagram.com/p/DOCxdUnD0Fl/?img_index=4' },
+      { text: '더현대 및 오프라인 서점에서 어린이 대상 강연 프로그램 진행', url: 'https://www.instagram.com/p/DOCxdUnD0Fl/?img_index=4', linkOnly: true },
     ],
     impact: [
       '국토교통부 장관 표창 수상(2024)',
@@ -275,8 +276,8 @@ export const projects = [
     strategy: [
       '펫 캐리어 콘셉트 기획·기내 테스트·출시 조율 수행',
       '기내 펫티켓 콘텐츠 발행',
-      { text: '항공사 최초 반려동물 허용 무게 10kg 개정 (2024.02)', url: 'https://www.instagram.com/p/C39D9V5vrO9/' },
-      { text: '임직원 펫 용어 교육·대처법 훈련 연계로 내부 브랜딩 확장', url: 'https://www.instagram.com/p/C3rgZxyPlWt/?img_index=1' },
+      { text: '항공사 최초 반려동물 허용 무게 10kg 개정 (2024.02)', url: 'https://www.instagram.com/p/C39D9V5vrO9/', linkOnly: true },
+      { text: '임직원 펫 용어 교육·대처법 훈련 연계로 내부 브랜딩 확장', url: 'https://www.instagram.com/p/C3rgZxyPlWt/?img_index=1', linkOnly: true },
     ],
     impact: [
       '반려동물 동반 탑승객 대상 브랜드 경험 확장',
@@ -432,7 +433,7 @@ export const projects = [
     period: '2016.07 – 2018.07',
     contribution: 70,
     thumbnail: '/images/thumb_cnp_panasonic.jpg',
-    images: [],
+    images: ['/images/thumbnail_0000s_0002_015.jpg'],
     links: [],
     problem: [
       '브랜드 아이덴티티를 유지하면서 소셜 채널 인지도·참여도 동시 성장 필요',
@@ -445,7 +446,6 @@ export const projects = [
     ],
     impact: [
       '파나소닉 코리아 인스타그램 팔로워 +491%, 반응 +157% 달성',
-      "올림픽 시즌 캠페인 '2018평창동계올림픽 골든패키지' (2018.11~2019.01) 캠페인 배너 예상 클릭 대비 200% 초과 달성",
       'CNP 차앤박 인스타그램 팔로워 +69%, 페이스북 반응 +178% 달성',
     ],
   },
@@ -539,7 +539,7 @@ export const career = [
 ]
 
 export const education = [
-  { period: '2020.09 – 2022.12', school: 'Academy of Art University', location: 'CA', degree: 'BFA, Advertising(편입)', note: '' },
+  { period: '2020.09 – 2022.12', school: 'Academy of Art University', location: 'CA', degree: 'BFA, Advertising (편입)', note: '' },
   { period: '2011.09 – 2012.12', school: 'School of Visual Arts', location: 'NY', degree: 'Advertising (편입)', note: '' },
   { period: '2009.01 – 2011.05', school: 'County College of Morris', location: 'NJ', degree: 'Visual Arts', note: '' },
 ]
