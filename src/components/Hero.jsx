@@ -1,12 +1,9 @@
 import styles from './Hero.module.css'
 
-const base = import.meta.env.BASE_URL
-
 export default function Hero() {
   return (
     <section className={styles.hero} id="top">
       <div className={styles.inner}>
-        <img src={base + 'images/jh.png'} alt="김진희" className={styles.profileImg} />
         <h1 className={styles.name}>
           김진희<span className={styles.dot}>·</span><span className={styles.sub}>브랜드 마케터</span>
         </h1>
