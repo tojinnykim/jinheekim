@@ -1,10 +1,12 @@
 import styles from './Nav.module.css'
 
+const base = import.meta.env.BASE_URL
+
 export default function Nav() {
   return (
     <nav className={styles.nav}>
       <a href="#top" className={styles.logo}>
-        <img src="/images/profile.png" alt="김진희" className={styles.profileImg} />
+        <img src={base + 'images/profile.png'} alt="김진희" className={styles.profileImg} />
       </a>
       <ul className={styles.links}>
         <li><a href="#about">소개</a></li>
