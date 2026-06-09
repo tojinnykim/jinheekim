@@ -13,7 +13,7 @@ export default function Work() {
 
   const filtered = activeTab === 'all'
     ? projects
-    : projects.filter((p) => p.category === activeTab)
+    : projects.filter((p) => Array.isArray(p.category) ? p.category.includes(activeTab) : p.category === activeTab)
 
   const selectedProject = projects.find((p) => p.id === selectedId)
 
