@@ -56,7 +56,7 @@ export default function ProjectModal({ project, onClose }) {
               </ul>
             </div>
             <div className={styles.section}>
-              <div className={styles.sectionLabel}>결과 및 성과</div>
+              <div className={styles.sectionLabel}>핵심 성과</div>
               <ul className={styles.list}>
                 {project.impact.map((im, i) => <li key={i}>{im}</li>)}
               </ul>
