@@ -317,7 +317,7 @@ export const projects = [
     id: 'francoispet',
     category: 'brand',
     client: '프랑소와펫',
-    title: '“프리미엄 펫 라이프스타일 브랜드 경험 확장',
+    title: '프리미엄 펫 라이프스타일 브랜드 경험 확장',
     period: '2020.09 – 2022.07',
     contribution: 80,
     thumbnail: '/images/thumb_francoispet.jpg',
