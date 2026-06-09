@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     id: 'family_day',
-    category: 'brand',
+    category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '가정의 달 캠페인, 우리 가족은 팀 에어로케이',
     period: '2025.05',
@@ -68,7 +68,7 @@ export const projects = [
   },
   {
     id: 'city_editor',
-    category: 'brand',
+    category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '시티 에디터 — 크리에이터 협업',
     period: '2024.06 · 2025.06',
@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     id: 'children_safety',
-    category: 'brand',
+    category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '어린이 항공 안전 캠페인, 덜컹! 비행기가 왜 흔들려요?',
     period: '2024.09',
@@ -131,7 +131,7 @@ export const projects = [
   },
   {
     id: 'thama',
-    category: 'brand',
+    category: ['brand', 'content'],
     client: '에어로케이항공',
     title: 'Artist on Board with THAMA',
     period: '2024.10',
@@ -190,7 +190,7 @@ export const projects = [
   },
   {
     id: 'sound_obihiro',
-    category: 'brand',
+    category: ['brand', 'content'],
     client: '에어로케이항공',
     title: 'Sound of OBIHIRO',
     period: '2025.06',
@@ -217,7 +217,7 @@ export const projects = [
   },
   {
     id: 'rescue_dog',
-    category: 'brand',
+    category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '펫 프렌들리 CSR 캠페인, 181번째 가족을 찾습니다',
     period: '2023.12',
@@ -284,7 +284,7 @@ export const projects = [
   },
   {
     id: 'osaka',
-    category: 'brand',
+    category: ['brand'],
     client: '에어로케이항공',
     title: "청주~오사카 신규 취항 캠페인 '오사카스러운'",
     period: '2023.07',
@@ -397,7 +397,7 @@ export const projects = [
   },
   {
     id: 'panasonic',
-    category: 'growth',
+    category: ['brand', 'growth'],
     client: '엘에이치',
     title: '파나소닉 코리아 디지털 캠페인, 2018평창동계올림픽 골든패키지',
     period: '2017.11 – 2018.01',
@@ -501,7 +501,7 @@ export const projects = [
   },
   {
     id: 'lg_g3',
-    category: 'content',
+    category: ['brand', 'content'],
     client: '프로븐',
     title: '글로벌 유튜버 협업 캠페인',
     period: '2014.04 – 2014.07',
