@@ -34,7 +34,7 @@ export default function ProjectModal({ project, onClose }) {
               </div>
             )}
             <div className={styles.section}>
-              <div className={styles.sectionLabel}>문제 인식</div>
+              <div className={styles.sectionLabel}>해결 과제</div>
               <ul className={styles.list}>
                 {project.problem.map((p, i) => <li key={i}>{p}</li>)}
               </ul>
