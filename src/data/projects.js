@@ -6,6 +6,38 @@ export const categories = [
 
 export const projects = [
   {
+    id: 'jobfair',
+    category: ['brand', 'content'],
+    client: '에어로케이항공',
+    title: '채용 브랜딩 캠페인 영상 콘텐츠',
+    period: '2025.11',
+    contribution: 80,
+    thumbnail: '/images/thumbnail_0000s_0000_020.jpg',
+    images: [
+      '/images/project_imgs_0000s_0026_jobfair1.jpg',
+    ],
+    links: [
+      { label: '영상 콘텐츠 티징', url: 'https://www.instagram.com/reel/DQVX2fckoVX/?hl=ko' },
+      { label: '영상 콘텐츠 1편', url: 'https://www.instagram.com/reel/DQdvwalEdgn/?hl=ko' },
+      { label: '영상 콘텐츠 2편', url: 'https://www.instagram.com/reel/DQtUpFCETLn/?hl=ko' },
+    ],
+    problem: [
+      '채용 캠페인 홍보와 브랜드 이미지 강화를 동시에 달성할 영상 콘텐츠 필요',
+      '승무원 중심으로 인식되기 쉬운 항공사 이미지를 넘어, 다양한 직군과 구성원의 역할을 보여줄 필요',
+      '에어로케이의 조직 문화와 브랜드 분위기를 직관적으로 전달할 콘텐츠 자산 필요',
+    ],
+    strategy: [
+      '채용 캠페인 홍보 및 브랜딩을 위한 영상 콘텐츠 3편 기획·제작',
+      '운항 통제, 안전 보안, 공항 지점, 조업사, 정비사 등 승무원 외 직군을 조명해 항공사 운영을 함께 만드는 구성원의 역할 전달',
+      '승무원 콘텐츠의 경우 외국인 승무원, 간호사 출신 승무원 등 차별화된 커리어를 가진 구성원을 통해 브랜드의 개방성과 다양성 표현',
+    ],
+    impact: [
+      '채용 브랜딩 영상 콘텐츠 총 4편 제작',
+      '다양한 직군과 구성원의 이야기를 통해 조직 문화 기반 브랜드 콘텐츠로 확장',
+      '영상 콘텐츠 300,000회 이상 조회',
+    ],
+  },
+  {
     id: 'obihiro',
     category: 'brand',
     client: '에어로케이항공',
