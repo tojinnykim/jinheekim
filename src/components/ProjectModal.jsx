@@ -34,7 +34,7 @@ export default function ProjectModal({ project, onClose }) {
               </div>
             )}
             <div className={styles.section}>
-              <div className={styles.sectionLabel}>해결 과제</div>
+              <div className={styles.sectionLabel}>{project.problemLabel || '문제 인식'}</div>
               <ul className={styles.list}>
                 {project.problem.map((p, i) => <li key={i}>{p}</li>)}
               </ul>
@@ -56,11 +56,29 @@ export default function ProjectModal({ project, onClose }) {
               </ul>
             </div>
             <div className={styles.section}>
-              <div className={styles.sectionLabel}>핵심 성과</div>
+              <div className={styles.sectionLabel}>{project.impactLabel || '핵심 성과'}</div>
               <ul className={styles.list}>
-                {project.impact.map((im, i) => <li key={i}>{im}</li>)}
+                {project.impact.map((im, i) => (
+                  <li key={i}>
+                    {typeof im === 'object' && im.url ? (
+                      im.linkOnly ? (
+                        <>{im.text} <a href={im.url} target="_blank" rel="noreferrer" className={styles.inlineLink}>링크 →</a></>
+                      ) : (
+                        <a href={im.url} target="_blank" rel="noreferrer" className={styles.inlineLink}>{im.text} →</a>
+                      )
+                    ) : im}
+                  </li>
+                ))}
               </ul>
             </div>
+            {project.tasks && project.tasks.length > 0 && (
+              <div className={styles.section}>
+                <div className={styles.sectionLabel}>{project.tasksLabel || '주요 업무'}</div>
+                <ul className={styles.list}>
+                  {project.tasks.map((t, i) => <li key={i}>{t}</li>)}
+                </ul>
+              </div>
+            )}
             <div className={styles.contrib}>기여도 {project.contribution}%</div>
           </div>
           <div className={styles.right}>
