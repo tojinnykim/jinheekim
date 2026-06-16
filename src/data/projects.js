@@ -439,8 +439,8 @@ export const projects = [
     title: "글로벌 럭셔리 이커머스 '24S' 한국 런칭 캠페인",
     period: '2019.07 – 2019.10',
     contribution: 80,
-    thumbnail: '/images/thumbnail_0000s_0000_021.jpg',
-    images: ['/images/thumbnail_0000s_0000_021.jpg'],
+    thumbnail: '/images/project_imgs_0000s_0028_24s.jpg',
+    images: ['/images/project_imgs_0000s_0028_24s.jpg'],
     links: [],
     problem: [
       '한국 시장 내 24S 브랜드 인지도 및 검색 유입 확보 필요',
@@ -471,8 +471,8 @@ export const projects = [
     title: "럭셔리 패션 브랜드 'Max Mara' 디지털 효율 개선",
     period: '2018.11 – 2019.01',
     contribution: 80,
-    thumbnail: '/images/thumbnail_0000s_0000_022.jpg',
-    images: ['/images/thumbnail_0000s_0000_022.jpg'],
+    thumbnail: '/images/project_imgs_0000s_0027_maxmara.jpg',
+    images: ['/images/project_imgs_0000s_0027_maxmara.jpg'],
     links: [],
     problem: [
       '시즌 상품 및 프로모션 상품 중심의 온라인 유입 확대 필요',
