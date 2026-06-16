@@ -7,7 +7,7 @@ export const categories = [
 export const projects = [
   {
     id: 'jobfair',
-    category: ['brand', 'content'],
+    category: 'content',
     client: '에어로케이항공',
     title: '채용 브랜딩 캠페인 영상 콘텐츠',
     period: '2025.11',
@@ -78,6 +78,39 @@ export const projects = [
     ],
   },
   {
+    id: 'sound_obihiro',
+    category: 'content',
+    client: '에어로케이항공',
+    title: 'Sound of OBIHIRO',
+    period: '2025.06',
+    contribution: 80,
+    thumbnail: '/images/thumb_sound_obihiro.jpg',
+    images: [
+      '/images/project_imgs_0000s_0023_soundofobihiro1.jpg',
+      '/images/project_imgs_0000s_0023_soundofobihiro2.jpg',
+    ],
+    links: [
+      { label: '기내 디제잉 콘텐츠', url: 'https://www.instagram.com/p/DLOWYsey14G/' },
+      { label: '취항지 디제잉 콘텐츠', url: 'https://www.instagram.com/p/DLQ7XVoP1y2/' },
+    ],
+    problemLabel: '해결 과제',
+    problem: [
+      '오비히로의 자연경관과 지역 고유의 매력을 전면에 드러내 단순 취항지 소개를 넘어, 콘텐츠형 캠페인으로 목적지 인지와 여행 관심을 유도할 필요',
+    ],
+    strategy: [
+      '시각적 요소와 사운드 요소를 결합한 취항지 홍보 콘텐츠로 기획',
+      '콘텐츠 방향 설정 및 세부 촬영 내용, 유관부서 협의 및 조율',
+    ],
+    impact: [
+      '콘텐츠 영상 약 95만회 조회',
+    ],
+    tasksLabel: '담당 업무',
+    tasks: [
+      '브랜드 부스, 현장 동선, 운영 인력, 이벤트 참여 방식, 이슈 대응 프로세스 설계',
+      '외부 파트너와 제작물·일정·운영·예산 범위 조율',
+    ],
+  },
+  {
     id: 'family_day',
     category: ['brand', 'content'],
     client: '에어로케이항공',
@@ -111,34 +144,38 @@ export const projects = [
     ],
   },
   {
-    id: 'city_editor',
-    category: ['brand', 'content'],
+    id: 'thama',
+    category: 'content',
     client: '에어로케이항공',
-    title: '시티 에디터 — 크리에이터 협업',
-    period: '2024.06 · 2025.06',
-    contribution: 80,
-    thumbnail: '/images/thumb_city_editor.jpg',
+    title: 'Artist on Board with THAMA',
+    period: '2024.10',
+    contribution: 85,
+    thumbnail: '/images/thumb_thama.jpg',
     images: [
-      '/images/project_imgs_0000s_0015_cityeditor1.jpg',
-      '/images/project_imgs_0000s_0015_cityeditor2.jpg',
+      '/images/project_imgs_0000s_0021_thama1.jpg',
+      '/images/project_imgs_0000s_0021_thama2.jpg',
     ],
     links: [
-      { label: '오비히로편 보기', url: 'https://brand.aerok.net/cityeditor_obihiro' },
-      { label: '도쿄편 보기', url: 'https://brand.aerok.net/cityeditor_tokyo' },
+      { label: '인스타그램 콘텐츠', url: 'https://www.instagram.com/reel/DBGXGUZv4jx/' },
+      { label: '기내 특별 안내방송', url: 'https://www.instagram.com/reel/DAmnHg9vnbF/' },
     ],
     problem: [
-      '브랜드 일방 소개만으로는 취항지 관심 확장에 한계',
-      '실제 여행자의 시선으로 도시를 소개하는 참여형 구조 필요',
+      '탑승객의 기내 체류 시간을 브랜드 콘텐츠 경험으로 확장 필요',
+      '아티스트 협업을 단순 노출이 아닌 탑승 경험 안의 콘텐츠로 연결할 구조 필요',
     ],
     strategy: [
-      '여행자가 직접 취항 도시의 에디터가 되는 콘셉트으로 크리에이터 모집 진행',
-      'JR Hokkaido·시티호퍼스 등 외부 파트너와 협업하여 프로그램별 추가 혜택 제공',
+      '아티스트 타이틀곡 Mileage와 브랜드 아이덴티티의 접점 발굴',
+      '플레이리스트, 아티스트 녹음 기내 안내방송, 탑승·하기 음악, 기내 리플릿 연계',
+      '소셜 및 YouTube 콘텐츠로 기내 경험을 외부 채널까지 확장',
     ],
     impact: [
-      '오비히로편 1,500명 이상, 도쿄편 700명 이상 지원',
+      '인스타그램 콘텐츠 약 95만회 조회',
+      '유튜브 콘텐츠 약 1.8만회 조회',
     ],
+    tasksLabel: '담당 업무',
     tasks: [
-      '시티 에디터 모집, 콘텐츠 가이드 기획, 크리에이터 핸들링, 콘텐츠 발행 관리',
+      '아티스트 협업 구조 및 기내 안내방송, 탑승·하기 음악, 리플릿, 소셜 콘텐츠 기획',
+      '내부 유관부서, 아티스트, 외부 제작 파트너와 제작물·일정·운영 범위 조율',
     ],
   },
   {
@@ -181,38 +218,34 @@ export const projects = [
     ],
   },
   {
-    id: 'thama',
+    id: 'city_editor',
     category: ['brand', 'content'],
     client: '에어로케이항공',
-    title: 'Artist on Board with THAMA',
-    period: '2024.10',
-    contribution: 85,
-    thumbnail: '/images/thumb_thama.jpg',
+    title: '시티 에디터 — 크리에이터 협업',
+    period: '2024.06 · 2025.06',
+    contribution: 80,
+    thumbnail: '/images/thumb_city_editor.jpg',
     images: [
-      '/images/project_imgs_0000s_0021_thama1.jpg',
-      '/images/project_imgs_0000s_0021_thama2.jpg',
+      '/images/project_imgs_0000s_0015_cityeditor1.jpg',
+      '/images/project_imgs_0000s_0015_cityeditor2.jpg',
     ],
     links: [
-      { label: '인스타그램 콘텐츠', url: 'https://www.instagram.com/reel/DBGXGUZv4jx/' },
-      { label: '기내 특별 안내방송', url: 'https://www.instagram.com/reel/DAmnHg9vnbF/' },
+      { label: '오비히로편 보기', url: 'https://brand.aerok.net/cityeditor_obihiro' },
+      { label: '도쿄편 보기', url: 'https://brand.aerok.net/cityeditor_tokyo' },
     ],
     problem: [
-      '탑승객의 기내 체류 시간을 브랜드 콘텐츠 경험으로 확장 필요',
-      '아티스트 협업을 단순 노출이 아닌 탑승 경험 안의 콘텐츠로 연결할 구조 필요',
+      '브랜드 일방 소개만으로는 취항지 관심 확장에 한계',
+      '실제 여행자의 시선으로 도시를 소개하는 참여형 구조 필요',
     ],
     strategy: [
-      '아티스트 타이틀곡 Mileage와 브랜드 아이덴티티의 접점 발굴',
-      '플레이리스트, 아티스트 녹음 기내 안내방송, 탑승·하기 음악, 기내 리플릿 연계',
-      '소셜 및 YouTube 콘텐츠로 기내 경험을 외부 채널까지 확장',
+      '여행자가 직접 취항 도시의 에디터가 되는 콘셉트으로 크리에이터 모집 진행',
+      'JR Hokkaido·시티호퍼스 등 외부 파트너와 협업하여 프로그램별 추가 혜택 제공',
     ],
     impact: [
-      '인스타그램 콘텐츠 약 95만회 조회',
-      '유튜브 콘텐츠 약 1.8만회 조회',
+      '오비히로편 1,500명 이상, 도쿄편 700명 이상 지원',
     ],
-    tasksLabel: '담당 업무',
     tasks: [
-      '아티스트 협업 구조 및 기내 안내방송, 탑승·하기 음악, 리플릿, 소셜 콘텐츠 기획',
-      '내부 유관부서, 아티스트, 외부 제작 파트너와 제작물·일정·운영 범위 조율',
+      '시티 에디터 모집, 콘텐츠 가이드 기획, 크리에이터 핸들링, 콘텐츠 발행 관리',
     ],
   },
   {
@@ -247,39 +280,6 @@ export const projects = [
     tasks: [
       '브랜드 부스, 현장 동선, 운영 인력, 이벤트 참여 방식, 이슈 대응 프로세스 설계',
       '내부 유관부서, 외부 제작 파트너, 벤더사와 제작물·일정·운영·예산 범위 조율',
-    ],
-  },
-  {
-    id: 'sound_obihiro',
-    category: ['brand', 'content'],
-    client: '에어로케이항공',
-    title: 'Sound of OBIHIRO',
-    period: '2025.06',
-    contribution: 80,
-    thumbnail: '/images/thumb_sound_obihiro.jpg',
-    images: [
-      '/images/project_imgs_0000s_0023_soundofobihiro1.jpg',
-      '/images/project_imgs_0000s_0023_soundofobihiro2.jpg',
-    ],
-    links: [
-      { label: '기내 디제잉 콘텐츠', url: 'https://www.instagram.com/p/DLOWYsey14G/' },
-      { label: '취항지 디제잉 콘텐츠', url: 'https://www.instagram.com/p/DLQ7XVoP1y2/' },
-    ],
-    problemLabel: '해결 과제',
-    problem: [
-      '오비히로의 자연경관과 지역 고유의 매력을 전면에 드러내 단순 취항지 소개를 넘어, 콘텐츠형 캠페인으로 목적지 인지와 여행 관심을 유도할 필요',
-    ],
-    strategy: [
-      '시각적 요소와 사운드 요소를 결합한 취항지 홍보 콘텐츠로 기획',
-      '콘텐츠 방향 설정 및 세부 촬영 내용, 유관부서 협의 및 조율',
-    ],
-    impact: [
-      '콘텐츠 영상 약 95만회 조회',
-    ],
-    tasksLabel: '담당 업무',
-    tasks: [
-      '브랜드 부스, 현장 동선, 운영 인력, 이벤트 참여 방식, 이슈 대응 프로세스 설계',
-      '외부 파트너와 제작물·일정·운영·예산 범위 조율',
     ],
   },
   {
