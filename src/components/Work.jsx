@@ -1,59 +1,88 @@
 import { useState, useEffect } from 'react'
 import { projects, categories } from '../data/projects'
-import ProjectCard from './ProjectCard'
 import ProjectModal from './ProjectModal'
 import styles from './Work.module.css'
 
+const base = import.meta.env.BASE_URL
+
 const ALL_TAB = { id: 'all', label: '전체' }
-const allCategories = [ALL_TAB, ...categories]
+const allTabs = [ALL_TAB, ...categories]
+
+const CAT_SHORT = {
+  brand: 'Brand',
+  content: 'Content',
+  growth: 'Performance',
+}
+
+function getFirstCat(category) {
+  return Array.isArray(category) ? category[0] : category
+}
+
+function matchesFilter(project, filter) {
+  if (filter === 'all') return true
+  return Array.isArray(project.category)
+    ? project.category.includes(filter)
+    : project.category === filter
+}
 
 export default function Work() {
   const [activeTab, setActiveTab] = useState('all')
   const [selectedId, setSelectedId] = useState(null)
 
-  const filtered = activeTab === 'all'
-    ? projects
-    : projects.filter((p) => Array.isArray(p.category) ? p.category.includes(activeTab) : p.category === activeTab)
-
-  const selectedProject = projects.find((p) => p.id === selectedId)
+  const filtered = projects.filter(p => matchesFilter(p, activeTab))
+  const selectedProject = projects.find(p => p.id === selectedId)
 
   useEffect(() => {
-    if (selectedId) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
+    document.body.style.overflow = selectedId ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [selectedId])
 
-  const handleTabChange = (id) => {
-    setActiveTab(id)
-    setSelectedId(null)
-  }
-
   return (
     <section className={styles.work} id="work">
-      <div className={styles.sectionLabel}>프로젝트</div>
+      <div className={styles.secLabel}>Projects</div>
+
       <div className={styles.tabs}>
-        {allCategories.map((cat) => (
+        {allTabs.map(tab => (
           <button
-            key={cat.id}
-            className={`${styles.tab} ${activeTab === cat.id ? styles.tabActive : ''}`}
-            onClick={() => handleTabChange(cat.id)}
+            key={tab.id}
+            className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
+            onClick={() => { setActiveTab(tab.id); setSelectedId(null) }}
           >
-            {cat.label}
+            {tab.label}
           </button>
         ))}
       </div>
-      <div className={styles.grid}>
-        {filtered.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            isSelected={selectedId === project.id}
-            onSelect={() => setSelectedId(project.id)}
-          />
-        ))}
+
+      <div className={styles.list}>
+        {filtered.map(project => {
+          const catId = getFirstCat(project.category)
+          const catLabel = CAT_SHORT[catId] || catId
+          return (
+            <div
+              key={project.id}
+              className={styles.row}
+              onClick={() => setSelectedId(project.id)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={e => e.key === 'Enter' && setSelectedId(project.id)}
+            >
+              <div className={styles.rowText}>
+                <div className={styles.rowMeta}>
+                  <span className={styles.tag}>{catLabel}</span>
+                  <span className={styles.client}>{project.client} · {project.period}</span>
+                </div>
+                <div className={styles.rowTitle}>{project.title}</div>
+              </div>
+              <div className={styles.thumb}>
+                <img
+                  src={base + project.thumbnail.replace(/^\//, '')}
+                  alt={project.title}
+                />
+              </div>
+              <span className={styles.rowArrow}>→</span>
+            </div>
+          )
+        })}
       </div>
 
       {selectedProject && (
