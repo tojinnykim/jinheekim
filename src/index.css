@@ -1,27 +1,26 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #ffffff;
-  --fg: #0d0d0d;
-  --muted: #767676;
-  --border: #e5e5e5;
-  --hover: #f7f7f7;
-  --tag-bg: #f0f0f0;
-  --tag-fg: #444444;
-  --sidebar-w: 230px;
-  --section-px: 3rem;
+  --bg: #F2F2F2;
+  --main-bg: #FFFFFF;
+  --fg: #171717;
+  --muted: #858585;
+  --border: #ECECEC;
+  --card-bg: #F2F2F2;
+  --sidebar-w: 232px;
+  --section-px: 32px;
+  --content-maxw: 640px;
   --fi: 'Inter', sans-serif;
   --fk: 'Noto Sans KR', 'Inter', sans-serif;
 }
 
 [data-theme="dark"] {
   --bg: #111111;
-  --fg: #f0f0f0;
+  --main-bg: #1A1A1A;
+  --fg: #F0F0F0;
   --muted: #888888;
-  --border: #282828;
-  --hover: #1a1a1a;
-  --tag-bg: #222222;
-  --tag-fg: #bbbbbb;
+  --border: #2E2E2E;
+  --card-bg: #252525;
   color-scheme: dark;
 }
 

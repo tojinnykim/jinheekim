@@ -1,6 +1,5 @@
 .contact {
-  padding-inline: var(--section-px);
-  padding-block: 5rem;
+  padding-block: 0 5rem;
 }
 
 .secLabel {
@@ -51,5 +50,5 @@
 .link:hover { color: var(--fg); border-bottom-color: var(--fg); }
 
 @media (max-width: 600px) {
-  .contact { padding-block: 3rem; }
+  .contact { padding-block: 0 3rem; }
 }

@@ -22,9 +22,11 @@ export default function App() {
         onFilterChange={setActiveFilter}
       />
       <main className={styles.main}>
-        <About />
-        <Work filter={activeFilter} />
-        <Contact />
+        <div className={styles.content}>
+          <About />
+          <Work filter={activeFilter} />
+          <Contact />
+        </div>
       </main>
     </div>
   )

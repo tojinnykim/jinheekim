@@ -35,36 +35,38 @@ export default function Work({ filter = 'all' }) {
 
   return (
     <section className={styles.work} id="work">
-      <div className={styles.secLabel}>Projects</div>
+      <h2 className={styles.pageTitle}>Projects</h2>
+      <p className={styles.pageDesc}>브랜드 캠페인부터 디지털 퍼포먼스까지, 직접 기획·실행한 마케팅 프로젝트 모음입니다.</p>
 
-      <div className={styles.grid}>
+      <div className={styles.list}>
         {filtered.map(project => {
           const catId = getFirstCat(project.category)
           const catLabel = CAT_LABEL[catId] || catId
           return (
-            <div
-              key={project.id}
-              className={styles.card}
-              onClick={() => setSelectedId(project.id)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={e => e.key === 'Enter' && setSelectedId(project.id)}
-            >
-              <div className={styles.cardImg}>
-                <img
-                  src={base + project.thumbnail.replace(/^\//, '')}
-                  alt={project.title}
-                />
-              </div>
-              <div className={styles.cardBody}>
-                <div className={styles.cardMeta}>
-                  <span className={styles.tag}>{catLabel}</span>
-                  <span className={styles.client}>{project.client} · {project.period}</span>
+            <div key={project.id} className={styles.cardOuter}>
+              <div
+                className={styles.card}
+                onClick={() => setSelectedId(project.id)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={e => e.key === 'Enter' && setSelectedId(project.id)}
+              >
+                <div className={styles.cardImg}>
+                  <img
+                    src={base + project.thumbnail.replace(/^\//, '')}
+                    alt={project.title}
+                  />
                 </div>
-                <div className={styles.cardTitle}>{project.title}</div>
-                {project.subtitle && (
-                  <div className={styles.cardSub}>{project.subtitle}</div>
-                )}
+                <div className={styles.cardStack}>
+                  <div className={styles.cardRow}>
+                    <div className={styles.cardTitle}>{project.title}</div>
+                    <span className={styles.cardArrow}>↗</span>
+                  </div>
+                  {project.subtitle && (
+                    <p className={styles.cardDesc}>{project.subtitle}</p>
+                  )}
+                  <p className={styles.cardMeta}>{project.client} · {project.period} · {catLabel}</p>
+                </div>
               </div>
             </div>
           )

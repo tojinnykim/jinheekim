@@ -1,7 +1,5 @@
 .about {
-  padding-inline: var(--section-px);
-  padding-block: 5rem;
-  border-bottom: 1px solid var(--border);
+  padding-block: 0 5rem;
 }
 
 .secLabel {
@@ -89,6 +87,6 @@
 }
 
 @media (max-width: 600px) {
-  .about { padding-block: 3rem; }
+  .about { padding-block: 0 3rem; }
   .careerRow { grid-template-columns: 1fr; gap: 0.2rem; }
 }
