@@ -7,6 +7,7 @@ import styles from './App.module.css'
 
 export default function App() {
   const [dark, setDark] = useState(false)
+  const [activeFilter, setActiveFilter] = useState('all')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
@@ -14,10 +15,15 @@ export default function App() {
 
   return (
     <div className={styles.layout}>
-      <Nav dark={dark} onToggle={() => setDark(d => !d)} />
+      <Nav
+        dark={dark}
+        onToggle={() => setDark(d => !d)}
+        filter={activeFilter}
+        onFilterChange={setActiveFilter}
+      />
       <main className={styles.main}>
         <About />
-        <Work />
+        <Work filter={activeFilter} />
         <Contact />
       </main>
     </div>

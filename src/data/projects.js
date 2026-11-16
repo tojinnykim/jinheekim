@@ -7,6 +7,7 @@ export const categories = [
 export const projects = [
   {
     id: 'jobfair',
+    subtitle: '승무원 외 다양한 직군의 이야기로 조직 문화를 보여준 채용 브랜딩 콘텐츠 (3편, 30만 회 이상 조회)',
     category: 'content',
     client: '에어로케이항공',
     title: '채용 브랜딩 캠페인 영상 콘텐츠',
@@ -42,6 +43,7 @@ export const projects = [
   },
   {
     id: 'obihiro',
+    subtitle: '\'진짜 홋카이도는 오비히로\' 메시지로 취항 목표 KPI를 초과 달성한 신규 노선 캠페인',
     category: 'brand',
     client: '에어로케이항공',
     title: '청주~오비히로 신규 취항 캠페인',
@@ -79,6 +81,7 @@ export const projects = [
   },
   {
     id: 'sound_obihiro',
+    subtitle: '오비히로의 자연을 사운드로 담은 기내 디제잉 콘텐츠로 약 95만 회 조회',
     category: 'content',
     client: '에어로케이항공',
     title: 'Sound of OBIHIRO',
@@ -112,6 +115,7 @@ export const projects = [
   },
   {
     id: 'family_day',
+    subtitle: '임직원 가족의 목소리로 기내 안내방송을 채운 가정의 달 내부 브랜딩 캠페인',
     category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '가정의 달 캠페인, 우리 가족은 팀 에어로케이',
@@ -145,6 +149,7 @@ export const projects = [
   },
   {
     id: 'thama',
+    subtitle: '아티스트 THAMA와 협업해 기내를 브랜드 콘텐츠 공간으로 확장한 캠페인 (인스타그램 약 95만 회 조회)',
     category: 'content',
     client: '에어로케이항공',
     title: 'Artist on Board with THAMA',
@@ -180,6 +185,7 @@ export const projects = [
   },
   {
     id: 'children_safety',
+    subtitle: '항공 안전을 어린이 도서로 전환해 국토교통부 장관 표창과 초판 완판을 이끈 캠페인',
     category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '어린이 항공 안전 캠페인, 덜컹! 비행기가 왜 흔들려요?',
@@ -219,6 +225,7 @@ export const projects = [
   },
   {
     id: 'city_editor',
+    subtitle: '여행자가 취항지 에디터가 되는 크리에이터 협업 프로그램으로 오비히로·도쿄 편 2,200명 이상 지원',
     category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '시티 에디터 — 크리에이터 협업',
@@ -250,6 +257,7 @@ export const projects = [
   },
   {
     id: 'fandom',
+    subtitle: 'UMF·게임 팬덤 행사 브랜드 부스로 항공 접점 밖에서 7,000명 이상을 만난 팝업 이벤트',
     category: 'brand',
     client: '에어로케이항공',
     title: '브랜드 이벤트 팝업 기획 및 운영',
@@ -284,6 +292,7 @@ export const projects = [
   },
   {
     id: 'rescue_dog',
+    subtitle: '기내 전 접점을 유기동물 입양 미디어로 전환한 펫 친화 CSR 캠페인',
     category: ['brand', 'content'],
     client: '에어로케이항공',
     title: '펫 프렌들리 CSR 캠페인, 181번째 가족을 찾습니다',
@@ -323,6 +332,7 @@ export const projects = [
   },
   {
     id: 'pet_service',
+    subtitle: '기내 전용 펫 캐리어를 기획·출시하고 동반 허용 무게를 10kg으로 개정한 펫 프렌들리 브랜딩',
     category: 'brand',
     client: '에어로케이항공',
     title: '펫 프렌들리 브랜딩 & 기내 반입 전용 펫 캐리어 출시',
@@ -361,6 +371,7 @@ export const projects = [
   },
   {
     id: 'osaka',
+    subtitle: '현지인 인터뷰로 오사카를 재해석해 인스타그램 팔로워를 2배로 늘린 첫 국제선 취항 캠페인',
     category: ['brand'],
     client: '에어로케이항공',
     title: "청주~오사카 신규 취항 캠페인 '오사카스러운'",
@@ -399,6 +410,7 @@ export const projects = [
   },
   {
     id: 'francoispet',
+    subtitle: '오프라인 거점 3→11개로 확장하고 PB 월 매출 218% 성장을 이끈 프리미엄 펫 브랜드 마케팅',
     category: 'brand',
     client: '프랑소와펫',
     title: '프리미엄 펫 라이프스타일 브랜드 경험 확장',
@@ -434,6 +446,7 @@ export const projects = [
   },
   {
     id: '24s_maxmara',
+    subtitle: '네이버 브랜드검색 ROAS 2,984%를 달성한 글로벌 럭셔리 이커머스 한국 런칭 캠페인',
     category: 'growth',
     client: '아지앙스 코리아',
     title: "글로벌 럭셔리 이커머스 '24S' 한국 런칭 캠페인",
@@ -466,6 +479,7 @@ export const projects = [
   },
   {
     id: 'maxmara',
+    subtitle: '풀퍼널 미디어 운영으로 패션 업계 평균 CTR 2.5배를 기록한 럭셔리 디지털 캠페인',
     category: 'growth',
     client: '아지앙스 코리아',
     title: "럭셔리 패션 브랜드 'Max Mara' 디지털 효율 개선",
@@ -498,6 +512,7 @@ export const projects = [
   },
   {
     id: 'british_council',
+    subtitle: '온·오프라인 통합으로 전환 KPI 189% 달성, CPA 86% 절감한 어학원 캠페인',
     category: 'growth',
     client: '아지앙스 코리아',
     title: '주한영국문화원 어학원 통합 캠페인',
@@ -529,6 +544,7 @@ export const projects = [
   },
   {
     id: 'panasonic',
+    subtitle: '올림픽 성화봉송 타이밍을 활용해 클릭 200% 초과, 2만 8천 명이 참여한 이벤트 캠페인',
     category: ['brand', 'growth'],
     client: '엘에이치',
     title: '파나소닉 코리아 디지털 캠페인, 2018평창동계올림픽 골든패키지',
@@ -562,6 +578,7 @@ export const projects = [
   },
   {
     id: 'cnp_panasonic',
+    subtitle: '파나소닉 인스타그램 팔로워 491% 성장을 이끈 2개 브랜드 멀티채널 운영',
     category: 'content',
     client: '엘에이치',
     title: 'CNP 차앤박 화장품·파나소닉 코리아 소셜 채널 운영',
@@ -591,6 +608,7 @@ export const projects = [
   },
   {
     id: 'haagendazs',
+    subtitle: '소셜 이벤트로 페이스북 팬 목표 205% 초과 달성한 신제품 론칭 캠페인',
     category: 'brand',
     client: '캠페인 유나이티드',
     title: '하겐다즈 코리아 신제품 출시 기념 통합 캠페인',
@@ -620,6 +638,7 @@ export const projects = [
   },
   {
     id: 'lufthansa',
+    subtitle: '디지털 여행 매거진 운영으로 하반기 트래픽 269% 성장, 연간 4만 9천 페이지뷰 달성',
     category: 'content',
     client: '캠페인 유나이티드',
     title: '루프트한자 독일항공 브랜드 콘텐츠 기획 및 채널 운영',
@@ -653,6 +672,7 @@ export const projects = [
   },
   {
     id: 'lg_g3',
+    subtitle: '북미·유럽 유튜버 협업으로 LG G3 출시 영상 누적 75만 회 이상 조회를 이끈 글로벌 캠페인',
     category: ['brand', 'content'],
     client: '프로븐',
     title: '글로벌 유튜버 협업 캠페인',

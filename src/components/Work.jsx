@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react'
-import { projects, categories } from '../data/projects'
+import { projects } from '../data/projects'
 import ProjectModal from './ProjectModal'
 import styles from './Work.module.css'
 
 const base = import.meta.env.BASE_URL
 
-const ALL_TAB = { id: 'all', label: '전체' }
-const allTabs = [ALL_TAB, ...categories]
-
-const CAT_SHORT = {
+const CAT_LABEL = {
   brand: 'Brand',
   content: 'Content',
   growth: 'Performance',
@@ -25,11 +22,10 @@ function matchesFilter(project, filter) {
     : project.category === filter
 }
 
-export default function Work() {
-  const [activeTab, setActiveTab] = useState('all')
+export default function Work({ filter = 'all' }) {
   const [selectedId, setSelectedId] = useState(null)
 
-  const filtered = projects.filter(p => matchesFilter(p, activeTab))
+  const filtered = projects.filter(p => matchesFilter(p, filter))
   const selectedProject = projects.find(p => p.id === selectedId)
 
   useEffect(() => {
@@ -41,45 +37,35 @@ export default function Work() {
     <section className={styles.work} id="work">
       <div className={styles.secLabel}>Projects</div>
 
-      <div className={styles.tabs}>
-        {allTabs.map(tab => (
-          <button
-            key={tab.id}
-            className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
-            onClick={() => { setActiveTab(tab.id); setSelectedId(null) }}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
-      <div className={styles.list}>
+      <div className={styles.grid}>
         {filtered.map(project => {
           const catId = getFirstCat(project.category)
-          const catLabel = CAT_SHORT[catId] || catId
+          const catLabel = CAT_LABEL[catId] || catId
           return (
             <div
               key={project.id}
-              className={styles.row}
+              className={styles.card}
               onClick={() => setSelectedId(project.id)}
               role="button"
               tabIndex={0}
               onKeyDown={e => e.key === 'Enter' && setSelectedId(project.id)}
             >
-              <div className={styles.rowText}>
-                <div className={styles.rowMeta}>
-                  <span className={styles.tag}>{catLabel}</span>
-                  <span className={styles.client}>{project.client} · {project.period}</span>
-                </div>
-                <div className={styles.rowTitle}>{project.title}</div>
-              </div>
-              <div className={styles.thumb}>
+              <div className={styles.cardImg}>
                 <img
                   src={base + project.thumbnail.replace(/^\//, '')}
                   alt={project.title}
                 />
               </div>
-              <span className={styles.rowArrow}>→</span>
+              <div className={styles.cardBody}>
+                <div className={styles.cardMeta}>
+                  <span className={styles.tag}>{catLabel}</span>
+                  <span className={styles.client}>{project.client} · {project.period}</span>
+                </div>
+                <div className={styles.cardTitle}>{project.title}</div>
+                {project.subtitle && (
+                  <div className={styles.cardSub}>{project.subtitle}</div>
+                )}
+              </div>
             </div>
           )
         })}

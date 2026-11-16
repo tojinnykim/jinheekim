@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
+import { categories } from '../data/projects'
 import styles from './Nav.module.css'
+
+const base = import.meta.env.BASE_URL
 
 const NAV_ITEMS = [
   { href: '#about', label: '소개', id: 'about' },
@@ -7,7 +10,12 @@ const NAV_ITEMS = [
   { href: '#contact', label: '연락', id: 'contact' },
 ]
 
-export default function Nav({ dark, onToggle }) {
+const SUB_ITEMS = [
+  { id: 'all', label: '전체' },
+  ...categories,
+]
+
+export default function Nav({ dark, onToggle, filter = 'all', onFilterChange }) {
   const [active, setActive] = useState('about')
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -28,20 +36,44 @@ export default function Nav({ dark, onToggle }) {
     <>
       <aside className={styles.sidebar}>
         <div className={styles.profile}>
+          <img
+            src={base + 'images/profile.png'}
+            alt="김진희"
+            className={styles.avatar}
+          />
           <div className={styles.name}>김진희</div>
           <div className={styles.role}>Brand Marketer · Seoul</div>
         </div>
 
         <nav className={styles.nav}>
           {NAV_ITEMS.map(item => (
-            <a
-              key={item.id}
-              href={item.href}
-              className={`${styles.navLink} ${active === item.id ? styles.navActive : ''}`}
-            >
-              <span className={styles.dot} />
-              {item.label}
-            </a>
+            <div key={item.id}>
+              <a
+                href={item.href}
+                className={`${styles.navLink} ${active === item.id ? styles.navActive : ''}`}
+              >
+                <span className={styles.dot} />
+                {item.label}
+              </a>
+              {item.id === 'work' && (
+                <div className={styles.subNav}>
+                  {SUB_ITEMS.map(sub => (
+                    <a
+                      key={sub.id}
+                      href="#work"
+                      className={`${styles.subItem} ${filter === sub.id ? styles.subActive : ''}`}
+                      onClick={e => {
+                        e.preventDefault()
+                        onFilterChange?.(sub.id)
+                        document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
+                      }}
+                    >
+                      {sub.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
